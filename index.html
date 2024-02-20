@@ -21,22 +21,10 @@
 
         <div class="container p-5">
 
-            <h1 class="mb-5">To-Do List</h1>
+            <h1 class="mb-5 my_color text-center ">To-Do List</h1>
 
-            <ul v-if="tasks.length > 0" class="list-group">
-                <li v-for="(currentTask,index) in tasks"
-                class="list-group-item d-flex justify-content-between align-items-center"
-                :class="currentTask.done == true ? 'done':''"                
-                >
-                    <span @click="completed(currentTask)">{{currentTask.text}}</span> 
-                    <span @click="removeTask(index)"><i class="fa-solid fa-xmark"></i></span> 
-                </li>
-                
-            </ul>
-            <p v-else class="bg-success p-3 text-white">Hai completato tutti i tasks</p>
-
-            <div class="input-group mt-3">
-                <span class="input-group-text">Inserisci task</span>
+            <div class="input-group mb-5">
+                <span class="input-group-text bg-primary-subtle fw-bold ">Inserisci task</span>
                 <input 
                     v-model="newTask.text"
                     type="text" 
@@ -47,7 +35,7 @@
                     @keyup.enter="addTask()"
                 >
                 <button 
-                    class="btn btn-outline-secondary" 
+                    class="btn btn-outline-primary my_color fw-bold " 
                     type="submit" 
                     id="add-task"
                     @click="addTask()"
@@ -55,9 +43,22 @@
                     Aggiungi
                 </button>
             </div>
-            
+
+            <ul v-if="tasks.length > 0" class="list-group">
+                <li v-for="(currentTask,index) in tasks"
+                class="list-group-item d-flex justify-content-between align-items-center my_background"
+                :class="currentTask.done == true ? 'done':''"                             
+                >
+                    <span @click="completed(currentTask)">{{currentTask.text}}</span> 
+                    <span @click="removeTask(index)"><i class="fa fa-times-circle" aria-hidden="true"></i></span> 
+                </li>
+                
+            </ul>
+            <p v-else class="bg-success p-3 text-white rounded-3 text-center ">Hai completato tutti i tasks!</p>
+                       
 
         </div>
+
 
 
     </div>

@@ -1,6 +1,26 @@
+body{
+    background-color: #211951;
+    color: white;
+}
+
+.my_color{
+    border-color: #15F5BA;
+    color: #15F5BA;
+}
+
+.my_background{
+    background-color: #B7C9F2;
+}
+
 ul .done{
     text-decoration: line-through ;
+    filter: opacity(0.7);
+    background-color: #B7C9F2;
 
+}
+
+li:hover{
+    background-color: #b7c9f2e6
 }
 
 span {
@@ -9,4 +29,16 @@ span {
 
 li{
     user-select: none;
+}
+
+
+.fa{
+    filter: opacity(0.3);
+}
+
+.fa:hover{
+    filter: opacity(1);
+    color: rgba(255, 0, 0, 1);
+    scale: 1.1;
+
 }

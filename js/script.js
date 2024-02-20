@@ -31,7 +31,7 @@ createApp({
 
             newTask: {
                 text: "",
-                done: "false"
+                done: false
             },
             
             
@@ -61,6 +61,14 @@ createApp({
             this.newTask.text = ""
 
         },
+        completed(currenTask){
+
+            if (currenTask.done == false){
+                currenTask.done = true
+            } else {
+                currenTask.done = false
+            }
+        }
        
         
 

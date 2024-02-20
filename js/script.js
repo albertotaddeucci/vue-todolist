@@ -40,17 +40,28 @@ createApp({
         }
     },
     methods: {
+        //rimozione task
         removeTask(taskIndex){
             this.tasks.splice(taskIndex, 1);
         },
 
+        //aggiunta task
         addTask(){
-            this.tasks.push({...this.newTask})
+            
+            //controllo se campo di testo vuoto
+            if(this.newTask.text == ""){
+                alert ("Non hai inserito nulla!")
+            } else {     
+                //inserimento task           
+                this.tasks.push({...this.newTask})
+            }
 
+
+            //reset campo input
             this.newTask.text = ""
 
-        }
-        
+        },
+       
         
 
     },

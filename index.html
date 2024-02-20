@@ -42,10 +42,11 @@
                     placeholder="Scrivi qui il tuo nuovo task" 
                     aria-label="Scrivi qui il tuo nuovo task" 
                     aria-describedby="add-task"
+                    @keyup.enter="addTask()"
                 >
                 <button 
                     class="btn btn-outline-secondary" 
-                    type="button" 
+                    type="submit" 
                     id="add-task"
                     @click="addTask()"
                 >

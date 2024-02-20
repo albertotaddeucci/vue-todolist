@@ -35,6 +35,9 @@ createApp({
         }
     },
     methods: {
+        removeTask(taskIndex){
+            this.tasks.splice(taskIndex, 1);
+        }
         
         
 

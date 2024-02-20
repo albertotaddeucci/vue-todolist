@@ -16,7 +16,20 @@
 
     <div id="app">
 
-        
+        <div class="container p-5">
+
+            <h1>To-Do List</h1>
+
+            <ul class="list-group pt-4">
+                <li v-for="currentTask in tasks"
+                class="list-group-item"
+                :class="currentTask.done ? 'done':''"
+                >
+                {{currentTask.text}}</li>
+                
+            </ul>
+
+        </div>
 
 
     </div>

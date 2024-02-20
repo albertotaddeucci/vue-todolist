@@ -27,7 +27,12 @@ createApp({
                     text: "Aggiustare il comodino",
                     done: false
                 },
-            ]
+            ],
+
+            newTask: {
+                text: "",
+                done: "false"
+            },
             
             
             
@@ -37,6 +42,13 @@ createApp({
     methods: {
         removeTask(taskIndex){
             this.tasks.splice(taskIndex, 1);
+        },
+
+        addTask(){
+            this.tasks.push({...this.newTask})
+
+            this.newTask.text = ""
+
         }
         
         
